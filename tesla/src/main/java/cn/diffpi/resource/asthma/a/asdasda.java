@@ -1,5 +1,5 @@
 package cn.diffpi.resource.asthma.a;
 
-public class asdasda {
-
+public class asdasda   {
+	    
 }
