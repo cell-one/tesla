@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.dreampie:resty-cache:1.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/cn/dreampie/resty-cache/1.2.0-SNAPSHOT/resty-cache-1.2.0-20151204.073211-3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/cn/dreampie/resty-cache/1.2.0-SNAPSHOT/resty-cache-1.2.0-20151204.073211-3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/cn/dreampie/resty-cache/1.2.0-SNAPSHOT/resty-cache-1.2.0-20151204.073211-3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,233 @@
+<script type="text/javascript" src="assets/js/core/libraries/jquery_ui/core.min.js"></script>
+<script type="text/javascript" src="assets/js/core/libraries/jquery_ui/effects.min.js"></script>
+<script type="text/javascript" src="assets/js/core/libraries/jquery_ui/interactions.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/extensions/cookie.js"></script>
+<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/trees/fancytree_all.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins/trees/fancytree_childcounter.js"></script>
+<div class="page-container">
+	<div class="page-content">
+		<div class="content-wrapper">
+			<!-- 页头 -->
+			<div class="page-header panel border-bottom-lg border-bottom-info" style="background-color: #fff;">
+				<div class="breadcrumb-line">
+					<ul class="breadcrumb">
+						<li><a href="javascript:;" onclick="invoke('recruitment/index.html')"><i class="icon-home2 position-left"></i> 首页</a></li>
+						<li><a href="javascript:;">活动参数</a></li>
+						<li class="active">资源配套</li>
+					</ul>
+					<ul class="breadcrumb-elements">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-three-bars"></i>
+								<span class="caret"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		    <!--页头内容开始 -->
+		    <div class="content">
+		    	<div class="tabbable">
+					<ul class="nav nav-pills">
+						<li class="active"><a data-toggle="modal" data-target="#add_param" href="#basic-pill2">添加参数</a></li>
+					</ul>
+				</div>
+		    
+		    	
+		    	<!-- Basic datatable -->
+					<div id="divShow" class="panel panel-flat col-md-12">
+						<div class="panel-heading">
+							<h5 class="panel-title">参数列表</h5>
+							<div class="heading-elements">
+								<ul class="icons-list">
+				               		<li><a data-action="collapse"></a></li>
+				               		<li><a data-action="reload"></a></li>
+				               	</ul>
+							</div>
+						</div>
+						<div id="container"> 
+							<table id="example" class="table table-striped table-bordered table-hover">
+								<thead>
+						            <tr>
+						            	<th>参数名称</th>
+						                <th>数值</th>
+						                <th>Action</th>
+						            </tr>
+						        </thead>
+							</table>
+							</br>
+						</div> 
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="add_param" class="modal fade">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h5 class="modal-title">参数设置</h5>
+			</div>
+
+			<form action="#" class="form-horizontal">
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="control-label col-sm-3">参数名词</label>
+						<div class="col-sm-9">
+							<input type="text" placeholder="名称" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">参数值</label>
+						<div class="col-sm-9">
+							<input type="text" placeholder="参数值" class="form-control">
+						</div>
+					</div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">关闭</button>
+					<button type="submit" class="btn btn-primary">保存</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function() {
+	var tree = $("#treetable").fancytree({
+		extensions:["edit","table"],
+		 source: {
+		        url: "json/ACTIVITYRESOURCETREE.json"
+		    },
+		checkbox:false,
+		table:{
+			nodeColumnIdx:0
+		},
+		renderColumns:function(event,data){
+			var node = data.node,
+	          $tdList = $(node.tr).find(">td");
+			$tdList.eq(1).html("<input style='width:50px;' type='text' name='requirement'>");
+	        $tdList.eq(2).html("");
+	        $tdList.eq(3).html("");
+		},
+	   
+	    init: function(event, data) {
+	        $('.has-tooltip .fancytree-title').tooltip();
+	    },
+	    activate:function(event,data){
+	    	var node = data.node,
+	          $tdList = $(node.tr).find(">td");
+	    	$tdList.eq(1).html("<input style='width:50px;' type='text' name='requirement'>");
+	        $tdList.eq(2).html("<input class='addbutton' type='button' name='add' value='+'>");
+	        if(node.countChildren(deep=true) == 0)
+	        {	        
+	        	$tdList.eq(3).html("<input class='delbutton' type='button' name='del' value='-'>");
+	        }
+	    },
+	    deactivate:function(event,data){
+	    	var node = data.node,
+	        $tdList = $(node.tr).find(">td");
+	    	$tdList.eq(1).html("<input style='width:50px;' type='text' name='requirement'>");
+	        $tdList.eq(2).html("");
+	        $tdList.eq(3).html("");
+	    },
+		edit: {
+	      triggerStart: ["f2", "dblclick", "shift+click", "mac+enter"],
+	      beforeEdit: function(event, data){
+	      },
+	      edit: function(event, data){
+	      },
+	      beforeClose: function(event, data){
+	      },
+	      save: function(event, data){
+	        console.log("save...", this, data);
+	        return true;
+	      },
+	      close: function(event, data){
+	        if( data.save ) {
+	          $(data.node.span).addClass("pending");
+	        }
+	      }
+	    },
+		   
+	});
+	$("#treetable").on("click",".addbutton",function(){
+		//tree.getActiveNode().editCreateNode(mode='child',init);
+		var node = $("#treetable").fancytree("getActiveNode");
+	      node.editCreateNode("child", {
+	        title: "需求",
+	        folder: false
+	      });
+
+	});
+	$("#treetable").on("click",".delbutton",function(){
+		//tree.getActiveNode().editCreateNode(mode='child',init);
+		var node = $("#treetable").fancytree("getActiveNode");
+		if(node.countChildren(deep=true) ==0){
+			node.remove();
+		}
+	     /*  node.editCreateNode("child", {
+	        title: "Node title",
+	        folder: false
+	      });
+ */
+	});
+	$("#treetable").delegate("input[name=requirement]", "click", function(e){
+		var node = $.ui.fancytree.getNode(e);
+		node.setActive(flag=true);
+		$(this).focus();
+	});
+	
+	
+	
+	
+	
+	//=========
+	$("#example").DataTable( {
+		"ajax": "json/BIZPARAM.json",
+        "columns": [
+                    { "data": "参数名称" },
+                    { "data": "参数值" },
+                    { "width":"50px",
+                      render:function(val){
+                    	return "<td class='text-center'>"
+						+"<ul class='icons-list'>"
+						+"<li class='dropdown'>"
+						+"<a href='#' class='dropdown-toggle' data-toggle='dropdown'>"
+						+"	<i class='icon-menu9'></i>"
+						+"</a>"
+						+"	<ul class='dropdown-menu dropdown-menu-right'>"
+						+"	<li><a href='#'><i class='icon-file-edit'></i>修改</a></li>"
+						+"	<li><a href='#'><i class='icon-file-delete'></i> 删除</a></li>"
+						+"	</ul>"
+						+"</li>"
+						+"</ul>"
+						+"</td>";
+                    }}
+                ]
+	} );
+	$.getJSON("json/RBactivityType.json",function(data){
+		$.each(data["data"],function(infoindex,info){
+			$("#TypeTree1,#TypeTree2").append("<option>"+info["名称"]+"</option>");
+		});
+	});
+	$("#add_one_resource").click(function(){
+		var name = $(".table").find("input[name=name]").val();
+		var req  = $(".table").find("textarea[name=req]").val();
+		$(".table").find("tbody").append("<tr><td>"+name+"</td><td>"+req+"</td></td>");
+		$(".table").find("input[name=name]").val("");
+		$(".table").find("textarea[name=req]").val("");
+	});
+	$("textarea[name=req]").keydown(function(w){
+		if(w.which == 13){
+			$(this).val($(this).val()+",");
+		}
+	});
+});
+</script>

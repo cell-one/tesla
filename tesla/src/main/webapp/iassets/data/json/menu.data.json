@@ -1,0 +1,49 @@
+[
+	{"name" : "主页" , "url" : "html/homepage/homepage.html" , "icon" : "icon-stack2"},
+	{"name" : "系统集成" ,"icon" : "icon-stack2" , "menu" : [
+		{"name" : "外围数据" , "url" : "" },
+		{"name" : "内部系统" , "url" : "page/databaseCenter.html" }
+	]},
+	{"name" : "活动管理"  , "icon" : "icon-stack2", "menu" : [
+	    {"name" : "活动申请" , "url" : "html/rulebank/rule_list.html" },
+		{"name" : "活动信息" , "url" : "html/rulebank/rule_list.html" }
+	]},
+	{"name" : "活动预算"  , "warning" : "12" , "errcode" : "400" , "icon" : "icon-stack2", "menu" : [
+	    {"name" : "预算科目设置", "warning" : "6" , "errcode" : "400" , "url" : "#" },
+	    {"name" : "项目预算编制", "warning" : "2" , "errcode" : "500" , "url" : "#" },
+	    {"name" : "项目预算审批" , "url" : "#" },
+	    {"name" : "预算综合分析", "warning" : "4" , "errcode" : "400" , "url" : "#" },
+	    {"name" : "预算执行分析" , "url" : "#" }
+	]},
+	{"name" : "合同管理"  , "icon" : "icon-stack2", "menu" : [
+	    {"name" : "合同台账" , "url" : "#" },
+	    {"name" : "合同审批" , "url" : "#" },
+	    {"name" : "合同综合分析" , "url" : "#" },
+	    {"name" : "合同执行分析" , "url" : "#" }
+	]},
+	{"name" : "租赁服务"  , "icon" : "icon-stack2", "menu" : [
+	    {"name" : "服务概况" , "url" : "#" },
+	    {"name" : "进退场服务" , "url" : "#" },
+	    {"name" : "计量表" , "url" : "#" }
+	]},
+	{"name" : "人员分工"  , "icon" : "icon-stack2", "menu" : [
+	    {"name" : "分工计划" , "url" : "#" },
+	    {"name" : "内容时间表" , "url" : "#" },
+	    {"name" : "奖惩条款" , "url" : "#" },
+	    {"name" : "弱矩阵组织结构" , "url" : "#" }
+	]},
+	{"name" : "安防管理"  , "icon" : "icon-stack2", "menu" : [
+	    {"name" : "安保排版管理" , "url" : "#" },
+	    {"name" : "安保设施运行数据" , "url" : "#" }
+	]},
+	{"name" : "清洁管理"  , "icon" : "icon-stack2", "menu" : [
+	    {"name" : "保洁计划" , "url" : "#" }
+	]},
+	{"name" : "活动规则库"  , "icon" : "icon-stack2", "menu" : [
+		{"name" : "规则列表" , "url" : "html/rulebank/rule_list.html" },
+		{"name" : "活动类型" , "url" : "html/rulebank/activity_type.html" },
+		{"name" : "活动组织者", "url" : "html/rulebank/activity_organizer.html"},
+		{"name" : "活动资源", "url" : "html/rulebank/activity_resource.html"},
+		{"name" : "业务参数设置", "url" : "html/rulebank/bizparam_conf.html"}]
+	}
+]

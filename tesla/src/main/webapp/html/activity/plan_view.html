@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div class="page-container">
+<div class="page-content">
+
+<div class="content-wrapper">
+	<!--页头-->
+	<div class="page-header panel border-bottom-lg border-bottom-info" style="background-color: #fff;">
+		
+		<div class="breadcrumb-line">
+			<ul class="breadcrumb">
+				<li><a href="javascript:;" onclick="invoke('recruitment/index.html')"><i class="icon-home2 position-left"></i> 首页</a></li>
+				<li><a href="javascript:;">招聘需求</a></li>
+				<li class="active">需求职位</li>
+			</ul>
+			<ul class="breadcrumb-elements">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-three-bars"></i>
+						<span class="caret"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+    <!--/页头-->
+    <!--内容开始-->
+    <div class="content">
+    	<!-- Basic datatable -->
+    	<div class="navbar navbar-default navbar-xs navbar-component">
+			<ul class="nav navbar-nav no-border visible-xs-block">
+				<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-filter"><i class="icon-menu7"></i></a></li>
+			</ul>
+			<div class="navbar-collapse collapse" id="navbar-filter">
+				<p class="navbar-text">筛选:</p>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-sort-time-asc position-left"></i> 公司 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">全部</a></li>
+							<li class="divider"></li>
+							<li><a href="#">上海分公司</a></li>
+							<li><a href="#">重庆分公司</a></li>
+							<li><a href="#">成都分公司</a></li>
+							<li><a href="#">深圳分公司</a></li>
+							<li><a href="#">广州分公司</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-sort-amount-desc position-left"></i> 紧急程度 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">全部</a></li>
+							<li class="divider"></li>
+							<li><a href="#">常规</a></li>
+							<li><a href="#">紧急</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel panel-flat col-sm-12">
+			<div class="panel-heading">
+				<h5 class="panel-title">需求职位</h5>
+				<div class="heading-elements">
+					<ul class="icons-list">
+                		<li><a data-action="collapse"></a></li>
+                		<li><a data-action="reload"></a></li>
+                	</ul>
+               	</div>
+			</div>
+			<table class="table datatable-fixed-left">
+				<thead>
+					<tr>
+						<th>所需职位</th>
+						<th>提出人</th>
+						<th>提出部门</th>
+						<th>所需人数</th>
+						<th>开始日期</th>
+						<th>结束日期</th>
+						<th>紧急程度</th>
+						<th>完成进度</th>
+						<th class="text-center">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">服务员</a></td>
+						<td>冉香云</td>
+						<td>重庆.营销部</td>
+						<td>[<a href="#">0</a>/20]</td>
+						<td>2015-12-03</td>
+						<td>2016-04-13</td>
+						<td><span class="label label-default">常规</span></td>
+						<td>
+							<div class="progress progress-rounded">
+								<div class="progress-bar bg-success" style="width: 60%">
+									<span>60%</span>
+								</div>
+							</div>
+						</td>
+						<td class="text-center">
+							<ul class="icons-list">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="icon-menu9"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">详情</a></li>
+										<li><a href="#">删除</a></li>
+										<li><a href="#">打印</a></li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">清洁工</a></td>
+						<td>李明亮</td>
+						<td>重庆.市场部</td>
+						<td>[<a href="#">0</a>/20]</td>
+						<td>2015-12-03</td>
+						<td>2016-01-11</td>
+						<td><span class="label label-danger">紧急</span></td>
+						<td>
+							<div class="progress progress-rounded">
+								<div class="progress-bar bg-success" style="width: 60%">
+									<span>60%</span>
+								</div>
+							</div>
+						</td>
+						<td class="text-center">
+							<ul class="icons-list">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="icon-menu9"></i>
+									</a>
+
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">详情</a></li>
+										<li><a href="#">删除</a></li>
+										<li><a href="#">打印</a></li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+						<tr>
+						<td><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">洗碗工</a></td>
+						<td>周浩</td>
+						<td>程度.销售部</td>
+						<td>[<a href="#">0</a>/20]</td>
+						<td>2015-12-03</td>
+						<td>2016-04-13</td>
+						<td><span class="label label-danger">紧急</span></td>
+						<td>
+							<div class="progress progress-rounded">
+								<div class="progress-bar bg-success" style="width: 60%">
+									<span>60%</span>
+								</div>
+							</div>
+						</td>
+						<td class="text-center">
+							<ul class="icons-list">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="icon-menu9"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">详情</a></li>
+										<li><a href="#">删除</a></li>
+										<li><a href="#">打印</a></li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">厨师</a></td>
+						<td>周游</td>
+						<td>上海.市场部</td>
+						<td>[<a href="#">0</a>/20]</td>
+						<td>2015-12-03</td>
+						<td>2016-10-13</td>
+						<td><span class="label label-default">常规</span></td>
+						<td>
+							<div class="progress progress-rounded">
+								<div class="progress-bar bg-success" style="width: 60%">
+									<span>60%</span>
+								</div>
+							</div>
+						</td>
+						<td class="text-center">
+							<ul class="icons-list">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="icon-menu9"></i>
+									</a>
+
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">详情</a></li>
+										<li><a href="#">删除</a></li>
+										<li><a href="#">打印</a></li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">服务员</a></td>
+						<td>黄建</td>
+						<td>成都.销售部</td>
+						<td>[<a href="#">0</a>/20]</td>
+						<td>2015-12-03</td>
+						<td>2016-06-13</td>
+						<td><span class="label label-default">常规</span></td>
+						<td>
+							<div class="progress progress-rounded">
+								<div class="progress-bar bg-success" style="width: 60%">
+									<span>60%</span>
+								</div>
+							</div>
+						</td>
+						<td class="text-center">
+							<ul class="icons-list">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="icon-menu9"></i>
+									</a>
+
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">详情</a></li>
+										<li><a href="#">删除</a></li>
+										<li><a href="#">打印</a></li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">店长助理</a></td>
+						<td>魏然</td>
+						<td>北京.市场部</td>
+						<td>[<a href="#">0</a>/20]</td>
+						<td>2015-12-03</td>
+						<td>2016-10-13</td>
+						<td><span class="label label-default">常规</span></td>
+						<td>
+							<div class="progress progress-rounded">
+								<div class="progress-bar bg-success" style="width: 60%">
+									<span>60%</span>
+								</div>
+							</div>
+						</td>
+						<td class="text-center">
+							<ul class="icons-list">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="icon-menu9"></i>
+									</a>
+
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="javascript:;" onclick="invoke('recruitment/plan/plan_info.html')">详情</a></li>
+										<li><a href="#">删除</a></li>
+										<li><a href="#">打印</a></li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+    </div>
+    </div>
+	<!--内容结束-->
+</div>
+
+</div>
+</div>
+</body>
+	<script type="text/javascript"  src="assets/js/plugins/dataTable/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="html/activity/plan_view.js"></script>
+	<script type="text/javascript"  src="assets/js/plugins/dataTable/dataTables.js"></script>
+	
+	
+	
+</html>
